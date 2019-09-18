@@ -30,9 +30,11 @@ public class AtividadeWeb {
      * Operação de Web service
      */
     @WebMethod(operationName = "opera\u00e7\u00e3o")
-    public Integer operação(@WebParam(name = "Valor1") int Valor1) {
-        //TODO write your implementation code here:
-        return null;
+    public int operação(@WebParam(name = "Valor1") int Valor1) {
+        if(Valor1  <= 10){
+            return Valor1;
+        }
+        return Valor1;
     }
      @WebMethod(operationName = "Valor_intervalo_entre 1 a 10")
     public int somar(@WebParam(name = "numero1") int numero1,  @WebParam(name = "numero2") String txt) {
@@ -46,15 +48,15 @@ public class AtividadeWeb {
     /**
      * Operação de Web service
      */
-    @WebMethod(operationName = "comparar")
-    public Integer comparar(@WebParam(name = "numero1") int numero1, @WebParam(name = "numero2") int numero2) {
-        //TODO write your implementation code here:
-        String resp;
-        
-        if(numero1 == numero2)
-             System.out.println(" O Numero "+numero1+ "é iguial a " + numero2);
-        System.out.println(" O Numero "+numero1+ "não iguial a " + numero2);
-       return ;
-    }
+//    @WebMethod(operationName = "comparar")
+//    public Integer comparar(@WebParam(name = "numero1") int numero1, @WebParam(name = "numero2") int numero2) {
+//        //TODO write your implementation code here:
+//        String resp;
+//        
+//        if(numero1 == numero2)
+//             System.out.println(" O Numero "+numero1+ "é iguial a " + numero2);
+//        System.out.println(" O Numero "+numero1+ "não iguial a " + numero2);
+//       return ;
+//    }
     
 }
